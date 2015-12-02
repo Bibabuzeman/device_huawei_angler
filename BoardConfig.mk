@@ -135,7 +135,8 @@ EXTENDED_FONT_FOOTPRINT := true
 -include vendor/huawei/angler/BoardConfigVendor.mk
 
 # Inline kernel building
-TARGET_GCC_VERSION_ARM64 := 4.9-kernel
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-5.2.1-UB/bin
+KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_SOURCE := kernel/huawei/angler
-TARGET_KERNEL_CONFIG := kylo_defconfig
+TARGET_KERNEL_CONFIG := angler_defconfig
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
